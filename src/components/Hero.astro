@@ -1,0 +1,32 @@
+<section class="hero">
+  <h1 class="title">I am my company</h1>
+  <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(80px + var(--space-3xl)) var(--section-padding) var(--space-3xl);
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 0 var(--space-lg);
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+</style>

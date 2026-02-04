@@ -1,0 +1,53 @@
+---
+const links = [
+  { href: '#engineering', label: 'Engineering' },
+  { href: '#writing', label: 'Writing' },
+  { href: '#fitness', label: 'Fitness' },
+  { href: '#youtube', label: 'YouTube' },
+  { href: '#case-management', label: 'Case Management' },
+];
+---
+
+<header class="header">
+  <a href="#" class="logo">Nuala Blaise</a>
+  <nav class="nav">
+    {links.map((link) => (
+      <a href={link.href}>{link.label}</a>
+    ))}
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--section-padding);
+    background: var(--color-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .nav {
+    display: flex;
+    gap: var(--space-xl);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .nav {
+      display: none;
+    }
+  }
+</style>
